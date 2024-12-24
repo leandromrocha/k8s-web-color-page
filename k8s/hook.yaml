@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  generateName: pre-message-hook-
+  name: pre-message-hook
   namespace: argocd
   annotations:
     argocd.argoproj.io/hook: PreSync
@@ -24,7 +24,7 @@ spec:
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: post-message-hook
+  generateName: post-message-hook-
   namespace: argocd
   annotations:
     argocd.argoproj.io/hook: PostSync
