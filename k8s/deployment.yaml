@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: webcolor
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: webcolor
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: webcolor
-        image: kubedevio/web-color:green
+        image: kubedevio/web-color:bluen
         ports:
         - containerPort: 80
 ---
